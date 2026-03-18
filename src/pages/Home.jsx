@@ -36,7 +36,7 @@ const Home = () => {
           transition={{ delay: 0.1 }}
           className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-6"
         >
-          Hi, I'm <span className="text-gradient">Anon Khan</span>
+          Hi, I'm <span className="text-gradient">M. Majid Khan</span>
         </motion.h1>
 
         <motion.div

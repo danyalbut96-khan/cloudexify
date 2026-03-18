@@ -40,7 +40,7 @@ const About = () => {
           
           <div className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
             <p>
-              I am <span className="text-slate-900 dark:text-white font-bold">Anon Khan</span>, a software engineer who believes that every complex problem has a simple, elegant solution waiting to be discovered.
+              I am <span className="text-slate-900 dark:text-white font-bold">M. Majid Khan</span>, a software engineer who believes that every complex problem has a simple, elegant solution waiting to be discovered.
             </p>
             <p>
               My journey started with a fascination for how code can bridge the gap between imagination and reality. Over the years, I've mastered languages like <span className="font-bold text-primary">Python, C++, Java, and JavaScript</span> to build tools that matter.

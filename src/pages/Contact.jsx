@@ -13,10 +13,9 @@ const Contact = () => {
   };
 
   const socials = [
-    { icon: <Github className="size-6" />, label: "GitHub", link: "#" },
-    { icon: <Linkedin className="size-6" />, label: "LinkedIn", link: "#" },
-    { icon: <Twitter className="size-6" />, label: "Twitter", link: "#" },
-    { icon: <Globe className="size-6" />, label: "Personal Site", link: "#" },
+    { icon: <Github className="size-6" />, label: "GitHub", link: "https://github.com/danyalbut96-khan" },
+    { icon: <Linkedin className="size-6" />, label: "LinkedIn", link: "https://www.linkedin.com/in/muhammad-majid-khan-a01a16365" },
+    { icon: <Mail className="size-6" />, label: "Email", link: "mailto:danyalbut96@gmail.com" },
   ];
 
   return (
@@ -51,7 +50,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-xs font-black uppercase tracking-widest opacity-40 mb-1">Send an Email</div>
-                    <div className="text-xl font-bold">hello@anonkhan.dev</div>
+                    <div className="text-xl font-bold">danyalbut96@gmail.com</div>
                   </div>
                </div>
                {/* Add more info blocks if needed */}

@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="size-10 bg-primary rounded-xl flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
               <Cpu className="size-6" />
             </div>
-            <h2 className="text-xl font-black tracking-tighter">ANON<span className="text-primary italic">.KHAN</span></h2>
+            <h2 className="text-xl font-black tracking-tighter">MAJID<span className="text-primary italic">.KHAN</span></h2>
           </Link>
 
           {/* Desktop Nav */}
