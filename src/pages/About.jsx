@@ -1,124 +1,103 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, Award, GraduationCap } from "lucide-react";
+import { User, Target, Lightbulb, Rocket, ChevronRight } from "lucide-react";
 
 const About = () => {
-  const timeline = [
+  const journeys = [
     {
-      year: "2023 - Present",
-      title: "Senior Full Stack Developer",
-      company: "TechNexus Solutions",
-      description: "Leading development of cloud-native SaaS platforms and AI integrations.",
-      icon: <Award className="text-primary" />,
+      year: "2024",
+      title: "Current Focus: AI & SaaS",
+      desc: "Building specialized API solutions and AI-driven productivity tools for businesses.",
+      active: true
     },
     {
-      year: "2021 - 2023",
-      title: "Full Stack Developer",
-      company: "Innovate AI",
-      description: "Focused on building responsive web applications and scalable backend APIs.",
-      icon: <Briefcase className="text-primary" />,
+      year: "2023",
+      title: "Enterprise Solutions",
+      desc: "Developed scalable backend architectures for e-commerce and fintech platforms.",
+      active: false
     },
     {
-      year: "2018 - 2021",
-      title: "Bachelor of Computer Science",
-      company: "Stanford University",
-      description: "Specialized in Artificial Intelligence and Software Engineering.",
-      icon: <GraduationCap className="text-primary" />,
-    },
+      year: "2021",
+      title: "The Start of SaaS",
+      desc: "Launched first three micro-SaaS products and discovered the power of independent tools.",
+      active: false
+    }
   ];
 
   return (
     <div className="py-20">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="max-w-3xl mb-20"
-      >
-        <h2 className="text-4xl font-bold mb-6">About Me</h2>
-        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-          I'm a passionate developer with a knack for creating elegant solutions to complex problems. 
-          With over 6 years of experience in the industry, I've worked on everything from small startup MVPs 
-          to large-scale enterprise systems.
-        </p>
-        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-          My goal is to build software that is not only functional but also provides a premium user experience. 
-          I believe that the bridge between engineering and design is where the most impactful products are born.
-        </p>
-      </motion.div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Timeline */}
-        <div>
-          <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <Calendar className="text-primary" /> My Journey
-          </h3>
-          <div className="space-y-8">
-            {timeline.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative pl-8 border-l border-slate-200 dark:border-primary/20"
-              >
-                <div className="absolute left-0 top-0 -translate-x-1/2 size-4 bg-primary rounded-full border-4 border-background-light dark:border-background-dark"></div>
-                <p className="text-sm font-bold text-primary mb-1">{item.year}</p>
-                <h4 className="text-xl font-bold mb-1">{item.title}</h4>
-                <p className="text-slate-500 dark:text-slate-500 font-medium mb-3">{item.company}</p>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Quick Facts / Info Card */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        {/* Left Side: Story */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="glass-card p-8 rounded-2xl h-fit sticky top-32"
         >
-          <div className="size-20 bg-primary/20 rounded-2xl flex items-center justify-center text-primary mb-6">
-            <Award className="size-10" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest mb-6">
+            <User className="size-3" /> All About Me
           </div>
-          <h3 className="text-2xl font-bold mb-4">Values & Approach</h3>
-          <ul className="space-y-4">
+          <h2 className="text-5xl font-black mb-8">Deeply Rooted in <span className="text-primary">Innovation</span> & Problems Solving.</h2>
+          
+          <div className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p>
+              I am <span className="text-slate-900 dark:text-white font-bold">Anon Khan</span>, a software engineer who believes that every complex problem has a simple, elegant solution waiting to be discovered.
+            </p>
+            <p>
+              My journey started with a fascination for how code can bridge the gap between imagination and reality. Over the years, I've mastered languages like <span className="font-bold text-primary">Python, C++, Java, and JavaScript</span> to build tools that matter.
+            </p>
+            <p>
+              Today, my focus is on <span className="font-bold text-primary">AI and SaaS infrastructure</span>. I don't just build apps; I create systems that are high-performance, scalable, and delightful to use.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 gap-6">
             {[
-              "Performance-first mindset",
-              "User-centric design focus",
-              "Scalable architecture patterns",
-              "Continuous learning & growth",
-            ].map((text, i) => (
-              <li key={i} className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
-                <div className="size-1.5 bg-primary rounded-full" />
-                {text}
-              </li>
+              { label: "Mindset", value: "Problem-Solver", icon: <Target className="text-primary" /> },
+              { label: "Focus", value: "SaaS Tools", icon: <Rocket className="text-primary" /> },
+            ].map((box, i) => (
+              <div key={i} className="glass-premium p-6 rounded-2xl">
+                <div className="mb-4">{box.icon}</div>
+                <div className="text-slate-500 uppercase text-[10px] font-black tracking-widest mb-1">{box.label}</div>
+                <div className="text-lg font-bold">{box.value}</div>
+              </div>
             ))}
-          </ul>
+          </div>
+        </motion.div>
+
+        {/* Right Side: Journey Timeline */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="glass-premium p-10 md:p-16 rounded-[3rem]"
+        >
+          <h3 className="text-2xl font-black mb-12 flex items-center gap-3">
+             The Journey <ChevronRight className="size-6 text-primary" />
+          </h3>
+          <div className="relative space-y-12">
+            <div className="absolute left-[7px] top-2 bottom-2 w-0.5 bg-primary/20"></div>
+            {journeys.map((j, i) => (
+              <div key={i} className="relative pl-10">
+                <div className={`absolute left-0 top-1.5 size-4 rounded-full border-4 border-background-dark z-10 ${j.active ? 'bg-primary ring-4 ring-primary/20' : 'bg-slate-700'}`}></div>
+                <div className="text-sm font-black text-primary mb-2 tracking-tighter uppercase">{j.year}</div>
+                <h4 className={`text-xl font-bold mb-2 ${j.active ? 'text-slate-900 dark:text-white' : 'text-slate-500'}`}>{j.title}</h4>
+                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{j.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 p-8 bg-primary/10 rounded-3xl border border-primary/20">
+            <div className="flex items-center gap-4">
+              <Lightbulb className="size-8 text-primary" />
+              <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                "Simple is better than complex. Complex is better than complicated."
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>
   );
 };
-
-const Briefcase = ({ className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-    <rect width="20" height="14" x="2" y="6" rx="2" />
-  </svg>
-);
 
 export default About;
